@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galerie – Pozemek č. 2 – Tetov</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --forest:    #27500A;
+  --leaf:      #3B6D11;
+  --grass:     #639922;
+  --lime:      #97C459;
+  --mint:      #C0DD97;
+  --pale:      #EAF3DE;
+  --cream:     #F5F3EC;
+  --parchment: #E6E2D6;
+  --earth:     #3D3322;
+  --text:      #1E200F;
+  --muted:     #566040;
+  --faint:     #8A9070;
+  --white:     #FAFAF6;
+  --r:  10px;
+  --rl: 16px;
+  --rxl: 22px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: var(--cream);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a { color: inherit; text-decoration: none; }
+
+nav {
+  background: var(--forest);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-logo { font-family: Georgia, serif; font-size: 15px; color: var(--mint); }
+.nav-logo strong { color: #fff; font-weight: normal; }
+.nav-back {
+  font-family: -apple-system, Arial, sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.15s;
+}
+.nav-back:hover { color: #fff; }
+.nav-back svg { width: 14px; height: 14px; }
+
+.page-header {
+  background: var(--forest);
+  padding: 2rem 2rem 2.5rem;
+  text-align: center;
+}
+.page-header .eyebrow {
+  font-family: -apple-system, Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mint);
+  opacity: 0.7;
+  margin-bottom: 0.4rem;
+}
+.page-header h1 {
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: normal;
+  color: #fff;
+  line-height: 1.2;
+}
+.page-header h1 em { font-style: italic; color: var(--lime); }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+
+.main-photo-wrap {
+  margin: 2.5rem 0 1rem;
+  border-radius: var(--rxl);
+  overflow: hidden;
+  border: 1px solid var(--parchment);
+  background: var(--white);
+  cursor: pointer;
+}
+.main-photo-wrap img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+.main-photo-wrap:hover img { transform: scale(1.02); }
+
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 2.5rem;
+}
+.thumb {
+  border-radius: var(--rl);
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.15s, opacity 0.15s;
+  background: var(--white);
+}
+.thumb.active { border-color: var(--grass); }
+.thumb:hover { opacity: 0.85; }
+.thumb img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+.info-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 2.5rem;
+}
+.info-chip {
+  font-family: -apple-system, Arial, sans-serif;
+  font-size: 12px;
+  background: var(--white);
+  border: 1px solid var(--parchment);
+  color: var(--muted);
+  padding: 5px 14px;
+  border-radius: 100px;
+}
+
+.back-section {
+  padding: 0 0 3rem;
+  text-align: center;
+}
+.btn-back {
+  font-family: -apple-system, Arial, sans-serif;
+  display: inline-block;
+  padding: 11px 24px;
+  border-radius: var(--r);
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--forest);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  text-decoration: none;
+}
+.btn-back:hover { opacity: 0.85; }
+
+footer {
+  background: var(--earth);
+  padding: 1.75rem 2rem;
+  text-align: center;
+  font-family: -apple-system, Arial, sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+}
+footer span { color: rgba(255,255,255,0.6); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><strong>Pozemky</strong> Tetov</div>
+  <a href="index.html" class="nav-back">
+    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Zpět na hlavní stránku
+  </a>
+</nav>
+
+<div class="page-header">
+  <p class="eyebrow">Fotogalerie</p>
+  <h1>Pozemek č.&nbsp;2 &mdash; <em>Tetov</em></h1>
+</div>
+
+<div class="wrap">
+
+  <div class="main-photo-wrap">
+    <img id="mainPhoto" src="Pozemek2_foto1.jpeg" alt="Pozemek č. 2 – foto 1">
+  </div>
+
+  <div class="thumbs">
+    <div class="thumb active" onclick="setPhoto('Pozemek2_foto1.jpeg', 'Pozemek č. 2 – foto 1', this)">
+      <img src="Pozemek2_foto1.jpeg" alt="Foto 1">
+    </div>
+    <div class="thumb" onclick="setPhoto('Pozemek2_foto2.png', 'Pozemek č. 2 – foto 2', this)">
+      <img src="Pozemek2_foto2.png" alt="Foto 2">
+    </div>
+    <div class="thumb" onclick="setPhoto('Pozemek2_foto3.png', 'Pozemek č. 2 – foto 3', this)">
+      <img src="Pozemek2_foto3.png" alt="Foto 3">
+    </div>
+  </div>
+
+  <div class="info-strip">
+    <span class="info-chip">Parcela 1&nbsp;793 m²</span>
+    <span class="info-chip">Stavební pozemek</span>
+    <span class="info-chip">Elektřina &middot; voda &middot; optika</span>
+    <span class="info-chip">Tetov, okr. Pardubice</span>
+  </div>
+
+  <div class="back-section">
+    <a href="index.html#kontakt" class="btn-back">Mám zájem o tento pozemek</a>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 Pozemky Tetov &nbsp;&middot;&nbsp; <span>Přímý prodej bez realitní kanceláře</span>
+</footer>
+
+<script>
+function setPhoto(src, alt, el) {
+  document.getElementById('mainPhoto').src = src;
+  document.getElementById('mainPhoto').alt = alt;
+  document.querySelectorAll('.thumb').forEach(function(t) { t.classList.remove('active'); });
+  el.classList.add('active');
+}
+</script>
+
+</body>
+</html>
