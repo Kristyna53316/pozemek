@@ -180,7 +180,6 @@ nav {
 .param-lbl { font-size: 11px; color: var(--faint); margin-bottom: 1px; }
 .param-val { font-size: 14px; font-weight: 600; color: var(--earth); }
 .pozemek-desc { font-size: 14px; color: var(--muted); line-height: 1.65; }
-.pozemek-foot { padding: 0 1.5rem 1.5rem; display: flex; gap: 10px; }
 
 .btn {
   font-family: -apple-system, Arial, sans-serif;
@@ -226,14 +225,6 @@ nav {
 }
 .desc-block p { font-size: 15px; color: var(--text); margin-bottom: 1.1rem; line-height: 1.8; }
 .desc-block p:last-child { margin-bottom: 0; }
-.pull {
-  border-left: 3px solid var(--lime);
-  padding-left: 1rem;
-  margin: 1.5rem 0;
-  font-size: 17px;
-  color: var(--forest);
-  font-style: italic;
-}
 
 /* MAPA */
 .map-card { background: var(--white); border: 1px solid var(--parchment); border-radius: var(--rl); overflow: hidden; }
@@ -302,7 +293,7 @@ footer span { color: rgba(255,255,255,0.6); }
     <span class="hero-pill">30 min Pardubice</span>
   </div>
 
-  < class="hero-landscape" viewBox="0 0 960 128" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <svg class="hero-landscape" viewBox="0 0 960 128" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
     <rect width="960" height="128" fill="#27500A"/>
     <path d="M0 86 Q130 46 260 74 Q390 98 510 54 Q630 16 750 63 Q860 102 960 66 L960 128 L0 128Z" fill="#3B6D11"/>
     <path d="M0 102 Q90 84 200 96 Q320 109 450 89 Q570 74 690 92 Q800 107 960 81 L960 128 L0 128Z" fill="#639922"/>
@@ -339,7 +330,7 @@ footer span { color: rgba(255,255,255,0.6); }
       <!-- Pozemek 1 -->
       <div class="pozemek-card">
         <a href="galerie-pozemek1.html" class="thumb-link" title="Otevřít galerii pozemku č. 1">
-        <img style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" src="Pozemek1_foto1.jpeg" alt="Pozemek č. 1">
+          <img style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" src="Pozemek1_foto1.jpeg" alt="Pozemek č. 1">
         </a>
         <div class="pozemek-body">
           <div><span class="pozemek-tag">Pozemek č. 1</span></div>
@@ -357,16 +348,13 @@ footer span { color: rgba(255,255,255,0.6); }
             <div class="param"><div class="param-lbl">Elektřina</div><div class="param-val">Ano</div></div>
             <div class="param"><div class="param-lbl">Vodovod</div><div class="param-val">Ano</div></div>
           </div>
-          <!-- <p class="pozemek-desc">Slunný pozemek s přístupem na příjezdovou cestu. Optický kabel přiveden. Vhodný pro rodinný dům i rekreaci.</p> -->
         </div>
       </div>
 
       <!-- Pozemek 2 -->
       <div class="pozemek-card">
         <a href="galerie-pozemek2.html" class="thumb-link" title="Otevřít galerii pozemku č. 2">
-        <!-- Fotografie: odkomentujte a doplňte cestu: -->
-        <img style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" src="foto2.jpg" alt="Pozemek č. 2">
-        <img style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" src="Pozemek2_foto1.jpeg" alt="Pozemek č. 2">
+          <img style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" src="Pozemek2_foto1.jpeg" alt="Pozemek č. 2">
         </a>
         <div class="pozemek-body">
           <div><span class="pozemek-tag">Pozemek č. 2</span></div>
@@ -384,7 +372,6 @@ footer span { color: rgba(255,255,255,0.6); }
             <div class="param"><div class="param-lbl">Elektřina</div><div class="param-val">Ano</div></div>
             <div class="param"><div class="param-lbl">Vodovod</div><div class="param-val">Ano</div></div>
           </div>
-          <!-- <p class="pozemek-desc">Prostornější parcela, k dispozici i alternativní výměra 1&nbsp;474 m². Podíl na společné příjezdové cestě. Optika na místě.</p> -->
         </div>
       </div>
 
@@ -487,7 +474,7 @@ footer span { color: rgba(255,255,255,0.6); }
       </div>
       <div class="kontakt-btns">
         <a href="tel:+420608608608" class="btn btn-phone">Zavolat</a>
-        <a href="/cdn-cgi/l/email-protection#215255405744434f480f514e5b444c4a58615255405744434f480f514e5b444c4a58" class="btn btn-email">Napsat e-mail</a>
+        <a href="mailto:stavebni.pozemky@stavebni.pozemky" class="btn btn-email">Napsat e-mail</a>
       </div>
     </div>
   </div>
@@ -495,4 +482,8 @@ footer span { color: rgba(255,255,255,0.6); }
 
 <!-- FOOTER -->
 <footer>
-  &copy; 2025 Pozemky Tetov &nbsp;&middot;&nbsp; <span>P&#345;&#237;m&#253; prodej bez realitn 
+  &copy; 2025 Pozemky Tetov &nbsp;&middot;&nbsp; <span>P&#345;&#237;m&#253; prodej bez realitní kancel&#225;&#345;e</span>
+</footer>
+
+</body>
+</html>
